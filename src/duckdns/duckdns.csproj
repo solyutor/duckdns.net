@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <RootNamespace>Solyutor.DuckDns</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="duckdns.config" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="duckdns.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="newtonsoft.json" Version="10.0.3" />
+    <PackageReference Include="topshelf" Version="4.1.0.117-develop" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Web.Services">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.1\System.Web.Services.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
